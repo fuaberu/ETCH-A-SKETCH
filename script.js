@@ -1,20 +1,19 @@
 //constants
 const container = document.querySelector('.container');
 const newGridBtn = document.querySelector('#new-grid');
- 
+const colorPicker = document.querySelector('.color-picker');
+const hover = document.querySelector('.hover');
+let penColor = 'black';
 
-//create a new div
-const createDiv = () => {
-    const newDiv = document.createElement('div');
-    newDiv.classList.add('new-Div'); 
-    newDiv.addEventListener('click', () => {
-        newDiv.classList.add('hover');
-    });
-    //add to the DOM
-    container.appendChild(newDiv);
+
+//give the hover class a chosen colors
+const chooseColor = () => {
+    colorPicker.addEventListener('input', () => {
+    let color = colorPicker.value; 
+    penColor = color;
+    }); 
 }
 
-//give the hover class random colors
 
 //ask how many divs need to be created
 newGridBtn.addEventListener('click', () => {
@@ -35,8 +34,17 @@ const allDivs = (amountOfDivs) => {
     container.style.gridTemplateColumns = `repeat(${amountOfDivs}, 1fr)`;
     //create the all the divs necessary
     for (let i = 0; i < amountOfDivs * amountOfDivs; i++) {
-        createDiv ()
-    }
+        //create a new div
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('new-Div'); 
+        newDiv.addEventListener('click', (event) => {
+            event.target.style.backgroundColor = penColor;
+            //newDiv.classList.add('hover');
+    }); 
+    //add to the DOM
+    container.appendChild(newDiv);
+}
+    
 }
 
 
