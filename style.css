@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.new-Div {
+    background-color: white;
+    border: 1px solid black;
+   
+}
+.container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}
+.hover {
+    background-color: black;
+}
