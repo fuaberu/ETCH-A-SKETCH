@@ -10,12 +10,22 @@
 </head>
 <body>
     <h1>ETCH-A-SKETCH</h1>
-    <button id="new-grid">New grid</button>
-    <input type="color" onclick="chooseColor()" class="color-picker">
-    <div class="container">
+    <div class="game">
+        <ul>
+        <li><button id="new-grid">New grid</button></li>
+        <li><input type="color" onclick="chooseColor()" class="color-picker"></li>
+        <li><button id="eraser">Eraser</button></li>
+        </ul>
+            
+        <div class="container">
 
-    </div>   
-    
+        </div>   
+        
+    </div>
     <script src="script.js"></script>
 </body>
+<footer class="footer">
+    Built by
+    <a class="footer-link" href="https://github.com/fuaberu"target="_blank">Fuaberu</a> | <a class="footer-link" href="https://fuaberu.github.io/ETCH-A-SKETCH/"target="_blank">Source</a>
+  </footer>
 </html>

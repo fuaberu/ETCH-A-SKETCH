@@ -2,17 +2,22 @@
 const container = document.querySelector('.container');
 const newGridBtn = document.querySelector('#new-grid');
 const colorPicker = document.querySelector('.color-picker');
-const hover = document.querySelector('.hover');
+const eraserBtn = document.querySelector('#eraser');
 let penColor = 'black';
 
 
-//give the hover class a chosen colors
+//choose a colors function
 const chooseColor = () => {
     colorPicker.addEventListener('input', () => {
     let color = colorPicker.value; 
     penColor = color;
     }); 
 }
+
+//eraser option
+eraserBtn.addEventListener('click', () => {
+penColor = 'white';
+}); 
 
 
 //ask how many divs need to be created
@@ -39,7 +44,7 @@ const allDivs = (amountOfDivs) => {
         newDiv.classList.add('new-Div'); 
         newDiv.addEventListener('click', (event) => {
             event.target.style.backgroundColor = penColor;
-            //newDiv.classList.add('hover');
+          
     }); 
     //add to the DOM
     container.appendChild(newDiv);
