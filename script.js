@@ -7,7 +7,7 @@ const newGridBtn = document.querySelector('#new-grid');
 const createDiv = () => {
     const newDiv = document.createElement('div');
     newDiv.classList.add('new-Div'); 
-    newDiv.addEventListener('mouseover', () => {
+    newDiv.addEventListener('click', () => {
         newDiv.classList.add('hover');
     });
     //add to the DOM
